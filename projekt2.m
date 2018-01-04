@@ -8,7 +8,9 @@ T3=10;
 T4=1;
 T0=25;
 
+%do PID
 Kp=1;
 Ti=1;
 Td=20;
+
 sim('symulacja',czas);
