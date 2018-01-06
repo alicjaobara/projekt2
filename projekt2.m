@@ -1,3 +1,4 @@
+%po plot i wszystkim do tego print('Re1','-dpng');
 %dane z MatLaba do Simulinka
 czas=200;
 
