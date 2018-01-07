@@ -9,19 +9,100 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+% poniższe z szablonu...
+\usepackage{geometry}
+\geometry{left=1in,right=1in,%
+	bindingoffset=0mm, top=1in, bottom=1in}
+\usepackage{amssymb, latexsym}
+\usepackage{amsthm}
+\usepackage{palatino}
+\usepackage{array}
+\usepackage{pstricks}
+\usepackage{textcomp}
+\usepackage{listings}
+
 \begin{document}
 	
 \pagestyle{plain}
 {\raggedright Alicja Obara, grupa 37 \\}
 {\centering \Large Programowanie w systemie MatLab. Projekt 2\\Projekt numer 248 \\}
+%\vspace{0.5cm}
+\renewcommand{\thesection}{\Roman{section}}
+\section{Wstęp}
+%\noindent 
+Obiekt regulacji opisany jest transmitancją G(s):
+$$G(s)=\frac{0.1s+1.4}{(100s^2 +10s+1)(s+1)} e^{-25s}$$
+Aby łatwo można było zmieniać parametry układu transmitancja została sparametryzowana do postaci:
+$$G(s)=\frac{K (T_1 s+1)}{(T_2 s^2 +T_3 s+1)(T_4 s+1)} e^{-T_0 s}$$
+Odpowiedzi w punktach 1 i 2 wyznaczono na modelu (o nazwie symulacja) w programie Symulink:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{modelsymulacja} 
+\end{figure}
 
+\section{Wyniki}
 
-\section{Porównanie temperatur trzech miast}
-Wykres na Rysunku 1. przedstawia wartości temperatur dla Warszawy, Krakowa i Suwałek w okresie trzech miesięcy.
+%\renewcommand*\thesubsection{\arabic{section}}% zmiana numeracji sekcji 0.X -> X
+%\setcounter{subsection}{1}
+\renewcommand{\thesubsection}{\arabic{subsection}}
 
+\subsection{Odpowiedź obiektu na wymuszenie skokowe u(t)=1(t-10).}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7.5cm]{pkt1} 
+\end{figure}
 
-\section{Porównanie ciśnienia trzech miast}
-Wykres na Rysunku 2. przedstawia wartości ciśnienia atmosferycznego dla Warszawy, Krakowa i Suwałek w okresie trzech miesięcy.
+\subsection{Odpowiedź obiektu na wymuszenie pulsowe u(t)=1(t-10)-1(t-11).}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7.5cm]{pkt2} 
+\end{figure}
 
+\subsection{Układ regulacji z regulatorem PID.}
+Schemat modelu (o nazwie symulacjaPID) w programie Symulink:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{modelsymulacjaPID} 
+\end{figure}
+Zastosowano układ różniczkujący rzeczywisty o wzmocnieniu dynamicznym kd=6.
+\subsection{Dobór nastaw regulatora PID.}
+Zastosowano dobór nastaw metodą Zieglera-Nicholsa. Polega ona na doprowadzeniu układu tylko z akcją P regulatora do niegasnących oscylacji o okresie $T_{osc}$ przy wzmocnieniu krytycznym $k_{kryt}$.
+Schemat modelu(o nazwie symulacjaZN) wykorzystanego do doboru nastaw:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{modelsymulacjaZN} 
+\end{figure}
+Niegasnące oscylacje wystąpiły dla $k_{kryt}=0.655$ i okres oscylacji odczytany z wykresu wynosi $T_{osc}=72$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7.5cm]{pkt4} 
+\end{figure}
+Na podstawie wzorów z metody Zieglera-Nicholsa obliczono: \\
+$K_p=0.6*k_{kryt}=0.393$ \\
+$T_i=0.5*T_{osc}=36$ \\
+$T_d=0.125*T_{osc}=9$ \\
+
+\subsection{Odpowiedzi układu z zadanym sygnałem i zakłóceniem.}
+\subsubsection{$y_r(t)=1(t-10), z(t)=0$}
+\begin{tabular}{cc}
+	\includegraphics[width=7cm]{pkt5_1a} &	\includegraphics[width=7cm]{pkt5_1b}
+\end{tabular}
+\subsubsection{$y_r(t)=1(t-10), z(t)=0.2*1(t-100)$}
+\begin{tabular}{cc}
+	\includegraphics[width=7cm]{pkt5_2a} &	\includegraphics[width=7cm]{pkt5_2b}
+\end{tabular}
+\subsubsection{$y_r(t)=sin(0.01t)*1(t-10), z(t)=0$}
+\begin{tabular}{cc}
+	\includegraphics[width=7cm]{pkt5_3a} &	\includegraphics[width=7cm]{pkt5_3b}
+\end{tabular}
+\subsubsection{$y_r(t)=cos(0.05t), z(t)=0.1[1(t)-sin(0.05t)]$}
+\begin{tabular}{cc}
+	\includegraphics[width=7cm]{pkt5_4a} &	\includegraphics[width=7cm]{pkt5_4b}
+\end{tabular}
+\subsection{Wskaźniki jakości regulacji.}
+
+\section{Wnioski}
+
+\section{Kod programu}
 
 \end{document}

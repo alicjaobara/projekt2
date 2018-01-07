@@ -64,9 +64,10 @@ while (m~=6)
         case 4
             w=0;
             while(w==0)
+                czass=200;
                 kin=inputdlg('Podaj wstÍpnie wartoúÊ wzmocnienia Kp:');
                 Kk=str2num(kin{1});
-                sim('symulacjaZN',czas);
+                sim('symulacjaZN',czass);
                 plot(tout, yout)
                 xlabel('t[s]');
                 ylabel('y');
@@ -111,7 +112,6 @@ while (m~=6)
             
             m1=menu('Menu','5.1','5.2','5.3','5.4','koniec');
             while(m1~=5)
-                czasPID=600;
                 %skok z
                 Tz=0;
                 Az=0;
@@ -138,7 +138,7 @@ while (m~=6)
                         %skok y
                         Ty=10;
                         Ay=1;
-                        tytul='yr(t)=1(t-10),z(t)=0';
+                        tytul='Odpowiedü na yr(t)=1(t-10),z(t)=0';
                         nazwa='pkt5_1a';
                         nazwa2='pkt5_1b';
                     case 2
@@ -148,7 +148,7 @@ while (m~=6)
                         %skok y
                         Ty=10;
                         Ay=1;
-                        tytul='yr(t)=1(t-10),z(t)=0.2*1(t-100)';
+                        tytul='Odpowiedü na yr(t)=1(t-10),z(t)=0.2*1(t-100)';
                         nazwa='pkt5_2a';
                         nazwa2='pkt5_2b';
                     case 3
@@ -159,7 +159,7 @@ while (m~=6)
                         Asy2=1;
                         omy2=0.01;
                         fazay2=0;
-                        tytul='yr(t)=sin(0.01t)*1(t-10),z(t)=0';
+                        tytul='Odpowiedü na yr(t)=sin(0.01t)*1(t-10),z(t)=0';
                         nazwa='pkt5_3a';
                         nazwa2='pkt5_3b';
                     case 4
@@ -174,11 +174,11 @@ while (m~=6)
                         Asy=1;
                         omy=0.05;
                         fazay=pi/2;
-                        tytul='yr(t)=cos(0.05t),z(t)=0.1[1(t)-sin(0.05t)]';
+                        tytul='Odpowiedü na yr(t)=cos(0.05t),z(t)=0.1[1(t)-sin(0.05t)]';
                         nazwa='pkt5_4a';
                         nazwa2='pkt5_4b';
                 end
-                sim('symulacjaPID',czasPID);
+                sim('symulacjaPID',czas);
                 figure
                 plot(tout, yr ,'--', tout, y)
                 title(tytul);
