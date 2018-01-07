@@ -1,0 +1,112 @@
+clear;
+%po plot i wszystkim do tego print('Re1','-dpng');
+%dane z MatLaba do Simulinka
+czas=200;
+K=1.4;
+T1=1/14;
+T2=100;
+T3=10;
+T4=1;
+T0=25;
+%do PID
+kd=6;
+Kp=1;
+Ti=1;
+Td=20;
+
+m=menu('Menu','zmiana parametrÛw','dalej');
+while (m~=2)
+    switch m
+        case 1
+            prompt = {'czas','K','T1','T2','T3','T4','T0'};
+            dlg_title = 'Input';
+            num_lines = 1;
+            defaultans = {'200','1.4','1/14','100','10','1','25'};
+            answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
+            [czas, status]=str2num(answer{1});
+            if ~status
+                czas=200;
+            end
+            [K, status]=str2num(answer{2});
+            if ~status
+                K=1.4;
+            end
+            [T1, status]=str2num(answer{3});
+            if ~status
+                T1=1/14;
+            end
+            [T2, status]=str2num(answer{4});
+            if ~status
+                T2=100;
+            end
+            [T3, status]=str2num(answer{5});
+            if ~status
+                T3=10;
+            end
+            [T4, status]=str2num(answer{6});
+            if ~status
+                T4=1;
+            end
+            [T0, status]=str2num(answer{7});
+            if ~status
+                T0=25;
+            end
+    end
+    m=menu('Menu','zmiana parametrÛw','dalej');
+end
+
+m=menu('Menu','pkt 1 odpowiedü skokowa','pkt 2 odpowiedü pulsowa','pkt 4 dobÛr Z-N','pkt PID','Koniec');
+while (m~=5)
+    switch m
+        case 1
+            FV=0; %amplituda drugiego wymuszenia skokowego
+            sim('symulacja',czas);
+            plot(tout, u ,'--', tout, y)
+            title('Odpowiedü na wymuszenie skokowe u(t)=1(t-10)')
+            grid on
+            xlabel('t[s]')
+            legend('wymuszenie u', 'odpowiedü y')
+            print('pkt1','-dpng');
+        case 2
+            FV=1; %amplituda drugiego wymuszenia skokowego
+            sim('symulacja',czas);
+            plot(tout, u,'--', tout, y)
+            title('Odpowiedü na wymuszenie skokowe u(t)=1(t-10)')
+            grid on
+            xlabel('t[s]')
+            legend('wymuszenie u', 'odpowiedü y')
+            print('pkt2','-dpng');
+        case 3
+            w=0;
+            while(w==0)
+                czass=200;
+                kin=inputdlg('Podaj wstÍpnie wartoúÊ wzmocnienia Kp:');
+                Kk=str2num(kin{1});
+                sim('symulacjaZN',czass);
+                plot(tout, yout)
+                xlabel('t[s]');
+                ylabel('y');
+                grid MINOR
+                print('pkt4','-dpng');
+                m1=menu('Sta≥e oscylacje?','Tak','Nie');
+                switch m1
+                    case 1
+                        Tin=inputdlg('Okres oscylacji z wykresu=');
+                        Tosc=str2num(Tin{1});
+                        Kp=0.6*Kk;
+                        Ti=0.5*Tosc;
+                        Td=0.125*Tosc;
+                        wiad=['Kp= ',num2str(Kk),' Ti= ',num2str(Ti),' Td= ',num2str(Td)];
+                        disp(wiad);
+                        w=1;
+                    case 2
+                        w=0;
+                end
+            end
+            
+        case 4
+            'zmiana parametrÛw PID'
+            
+    end
+    m=menu('Menu','pkt 1 odpowiedü skokowa','pkt 2 odpowiedü pulsowa','pkt 4 dobÛr Z-N','pkt PID','Koniec');
+end

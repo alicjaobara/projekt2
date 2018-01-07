@@ -105,12 +105,13 @@ Czas regulacji: 287.3s. Jest to czas od chwili wprowadzenia pobudzenia do chwili
 Przeregulowanie: 5.469\%. Jest to stosunek wartości drugiego uchybu przejściowego $e_2$ do wartości pierwszego uchybu przejściowego $e_{1}$  wyrażony w procentach.\\
 średni błąd regulacji: 0.1101. \\
 Całka kwadratu błędu regulacji: 38.2689. \\
-Energia sterowania w wyznaczonym czasie regulacji: 273.5698. \\
+Energia sterowania: 273.5698. \\
 \section{Wnioski}
 
 Dzięki programowi Simulink łatwo można było zasymulować model układu.
-Regulator PID zapewnia dobrą jakość regulacji dla badanych przypadków.
-Dla zadanych sygnałów sinusoidalnych widać że odpowiedź nie osiągnęła odpowiedniej amplitudy.
+Regulator PID zapewnia dobrą jakość regulacji dla wymuszeń o charakterze skokowym. Wówczas po pewnym czasie wartość wyjściowa ustala się na poziomie sygnału zadanego. 
+Dla zadanych sygnałów sinusoidalnych regulacja jest gorszej jakości. Odpowiedź nie osiągnęła odpowiedniej amplitudy oraz jest przesunięta w fazie.
+
 \section{Kod programu}
 
 \end{document}
