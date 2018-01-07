@@ -34,6 +34,7 @@ Obiekt regulacji opisany jest transmitancją G(s):
 $$G(s)=\frac{0.1s+1.4}{(100s^2 +10s+1)(s+1)} e^{-25s}$$
 Aby łatwo można było zmieniać parametry układu transmitancja została sparametryzowana do postaci:
 $$G(s)=\frac{K (T_1 s+1)}{(T_2 s^2 +T_3 s+1)(T_4 s+1)} e^{-T_0 s}$$
+Czas próbkowania w symulacjach $Tp=0.1$.
 Odpowiedzi w punktach 1 i 2 wyznaczono na modelu (o nazwie symulacja) w programie Symulink:
 \begin{figure}[H]
 	\centering
@@ -49,13 +50,13 @@ Odpowiedzi w punktach 1 i 2 wyznaczono na modelu (o nazwie symulacja) w programi
 \subsection{Odpowiedź obiektu na wymuszenie skokowe u(t)=1(t-10).}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=7.5cm]{pkt1} 
+	\includegraphics[width=7cm]{pkt1} 
 \end{figure}
 
 \subsection{Odpowiedź obiektu na wymuszenie pulsowe u(t)=1(t-10)-1(t-11).}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=7.5cm]{pkt2} 
+	\includegraphics[width=7cm]{pkt2} 
 \end{figure}
 
 \subsection{Układ regulacji z regulatorem PID.}
@@ -72,16 +73,16 @@ Schemat modelu(o nazwie symulacjaZN) wykorzystanego do doboru nastaw:
 	\centering
 	\includegraphics[width=10cm]{modelsymulacjaZN} 
 \end{figure}
-Niegasnące oscylacje wystąpiły dla $k_{kryt}=0.655$ i okres oscylacji odczytany z wykresu wynosi $T_{osc}=72$.
+Niegasnące oscylacje wystąpiły dla $k_{kryt}=0.649$ i okres oscylacji odczytany z wykresu wynosi $T_{osc}=72s$.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=7.5cm]{pkt4} 
 \end{figure}
 Na podstawie wzorów z metody Zieglera-Nicholsa obliczono: \\
-$K_p=0.6*k_{kryt}=0.393$ \\
-$T_i=0.5*T_{osc}=36$ \\
-$T_d=0.125*T_{osc}=9$ \\
-
+$K_p=0.6*k_{kryt}=0.3894$ \\
+$T_i=0.5*T_{osc}=36s$ \\
+$T_d=0.125*T_{osc}=9s$ \\
+Wzmocnienie dynamicznego członu różniczkującego przyjmuję $kd=6$.
 \subsection{Odpowiedzi układu z zadanym sygnałem i zakłóceniem.}
 \subsubsection{$y_r(t)=1(t-10), z(t)=0$}
 \begin{tabular}{cc}
@@ -99,10 +100,17 @@ $T_d=0.125*T_{osc}=9$ \\
 \begin{tabular}{cc}
 	\includegraphics[width=7cm]{pkt5_4a} &	\includegraphics[width=7cm]{pkt5_4b}
 \end{tabular}
-\subsection{Wskaźniki jakości regulacji.}
-
+\subsection{Wskaźniki jakości regulacji dla układu z pkt 5.1.}
+Czas regulacji: 287.3s. Jest to czas od chwili wprowadzenia pobudzenia do chwili gdy odchyłka regulacji e osiąga wartości mieszczące się w strefie tolerancji $\pm\Delta$ ($\Delta=0.05e_m$ gdzie $e_m$ jest największą  wartością bezwzględną odchyłki e w procesie regulacji) \\
+Przeregulowanie: 5.469\%. Jest to stosunek wartości drugiego uchybu przejściowego $e_2$ do wartości pierwszego uchybu przejściowego $e_{1}$  wyrażony w procentach.\\
+średni błąd regulacji: 0.1101. \\
+Całka kwadratu błędu regulacji: 38.2689. \\
+Energia sterowania w wyznaczonym czasie regulacji: 273.5698. \\
 \section{Wnioski}
 
+Dzięki programowi Simulink łatwo można było zasymulować model układu.
+Regulator PID zapewnia dobrą jakość regulacji dla badanych przypadków.
+Dla zadanych sygnałów sinusoidalnych widać że odpowiedź nie osiągnęła odpowiedniej amplitudy.
 \section{Kod programu}
 
 \end{document}

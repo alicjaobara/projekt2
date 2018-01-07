@@ -6,6 +6,7 @@ T2=100;
 T3=10;
 T4=1;
 T0=25;
+Tp=0.1;
 m=menu('Menu','zmiana parametrów','pkt 1 odpowiedŸ skokowa','pkt 2 odpowiedŸ pulsowa','pkt 4 dobór Z-N','pkt PID','Koniec');
 while (m~=6)
     switch m
@@ -94,11 +95,11 @@ while (m~=6)
             prompt = {'Kp','Ti','Td'};
             dlg_title = 'Input';
             num_lines = 1;
-            defaultans = {'0.393','36','9'};
+            defaultans = {'0.3894','36','9'};
             answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
             [Kp, status]=str2num(answer{1});
             if ~status
-                Kp=0.393;
+                Kp=0.3894;
             end
             [Ti, status]=str2num(answer{2});
             if ~status
@@ -195,7 +196,39 @@ while (m~=6)
                 legend('sygna³ steruj¹cy ur', 'zak³ócenia z')
                 print(nazwa2,'-dpng');
                 
-                m1=menu('Menu','5.1','5.2','5.3','5.4','koniec');
+                if(m1==1)%Obliczenia pkt6
+                    e_min = abs(min(e));
+                    e_max = abs(max(e));
+                    e_m=max(e_min,e_max);
+                    delta=0.05*e_m;
+                    N=size(e);
+                    N=N(1,1);
+                    i=N;
+                    j=1;
+                    while (e(i)<delta && e(i)>-delta)
+                        j=i;
+                        i=i-1;
+                    end
+                    Tr=tout(j)-Ty % czas regulacji
+                    suma=0;
+                    for i=1:N
+                        suma=suma+e(i,1);
+                    end
+                    e_sr=suma/N % sredni b³¹d regulacji
+                    
+                    suma=0;
+                    for i=1:N
+                        suma=suma+(e(i,1))^2;
+                    end
+                    e_sr2=suma*Tp % ca³ka kwadratu b³êdu regulacji
+
+                    suma=0;
+                    for i=1:N
+                        suma=suma+(ur(i,1))^2;
+                    end
+                    ur_en=suma*Tp % energia sterowañ
+                 end
+                 m1=menu('Menu','5.1','5.2','5.3','5.4','koniec');
             end
     end
     m=menu('Menu','zmiana parametrów','pkt 1 odpowiedŸ skokowa','pkt 2 odpowiedŸ pulsowa','pkt 4 dobór Z-N','pkt PID','Koniec');

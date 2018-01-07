@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.28)  7 JAN 2018 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.28)  7 JAN 2018 20:34
 entering extended mode
 **./document.tex
 (document.tex
@@ -1049,32 +1049,32 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 34.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-<modelsymulacja.png, id=1, 472.76625pt x 100.87688pt>
+<modelsymulacja.png, id=1, 475.02469pt x 105.39375pt>
 File: modelsymulacja.png Graphic file (type png)
  <use modelsymulacja.png>
-Package pdftex.def Info: modelsymulacja.png used on input line 40.
-(pdftex.def)             Requested size: 199.16928pt x 42.49883pt.
+Package pdftex.def Info: modelsymulacja.png used on input line 41.
+(pdftex.def)             Requested size: 199.16928pt x 44.18947pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 50.
 
 <pkt1.png, id=3, 421.575pt x 316.0608pt>
 File: pkt1.png Graphic file (type png)
  <use pkt1.png>
-Package pdftex.def Info: pkt1.png used on input line 52.
-(pdftex.def)             Requested size: 213.39566pt x 159.98802pt.
+Package pdftex.def Info: pkt1.png used on input line 53.
+(pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
 <pkt2.png, id=4, 421.575pt x 316.0608pt>
 File: pkt2.png Graphic file (type png)
  <use pkt2.png>
-Package pdftex.def Info: pkt2.png used on input line 58.
-(pdftex.def)             Requested size: 213.39566pt x 159.98802pt.
+Package pdftex.def Info: pkt2.png used on input line 59.
+(pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
-<modelsymulacjaPID.png, id=5, 568.37344pt x 207.77625pt>
+<modelsymulacjaPID.png, id=5, 610.53094pt x 207.02344pt>
 File: modelsymulacjaPID.png Graphic file (type png)
 
 <use modelsymulacjaPID.png>
-Package pdftex.def Info: modelsymulacjaPID.png used on input line 65.
-(pdftex.def)             Requested size: 284.52756pt x 104.01784pt.
+Package pdftex.def Info: modelsymulacjaPID.png used on input line 66.
+(pdftex.def)             Requested size: 284.52756pt x 96.48286pt.
  [1
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1086,77 +1086,81 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <.
 /modelsymulacja.png> <./pkt1.png (PNG copy)> <./pkt2.png (PNG copy)>]
-<modelsymulacjaZN.png, id=19, 448.67625pt x 96.36pt>
+<modelsymulacjaZN.png, id=19, 436.63126pt x 90.3375pt>
 File: modelsymulacjaZN.png Graphic file (type png)
 
 <use modelsymulacjaZN.png>
-Package pdftex.def Info: modelsymulacjaZN.png used on input line 73.
-(pdftex.def)             Requested size: 284.52756pt x 61.1085pt.
+Package pdftex.def Info: modelsymulacjaZN.png used on input line 74.
+(pdftex.def)             Requested size: 284.52756pt x 58.86754pt.
  <pkt4.png, id=20, 421.575pt x 316.0608pt>
 File: pkt4.png Graphic file (type png)
 
 <use pkt4.png>
-Package pdftex.def Info: pkt4.png used on input line 78.
+Package pdftex.def Info: pkt4.png used on input line 79.
 (pdftex.def)             Requested size: 213.39566pt x 159.98802pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 86.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 87.
 <pkt5_1a.png, id=21, 421.575pt x 316.0608pt>
 File: pkt5_1a.png Graphic file (type png)
  <use pkt5_1a.png>
-Package pdftex.def Info: pkt5_1a.png used on input line 88.
+Package pdftex.def Info: pkt5_1a.png used on input line 89.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
 <pkt5_1b.png, id=22, 421.575pt x 316.0608pt>
 File: pkt5_1b.png Graphic file (type png)
  <use pkt5_1b.png>
-Package pdftex.def Info: pkt5_1b.png used on input line 88.
+Package pdftex.def Info: pkt5_1b.png used on input line 89.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
  [2 <./modelsymulacjaPID.png> <./modelsymulacjaZN.png> <./pkt4.png (PNG copy)>]
 
 <pkt5_2a.png, id=29, 421.575pt x 316.0608pt>
 File: pkt5_2a.png Graphic file (type png)
  <use pkt5_2a.png>
-Package pdftex.def Info: pkt5_2a.png used on input line 92.
+Package pdftex.def Info: pkt5_2a.png used on input line 93.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
 <pkt5_2b.png, id=30, 421.575pt x 316.0608pt>
 File: pkt5_2b.png Graphic file (type png)
  <use pkt5_2b.png>
-Package pdftex.def Info: pkt5_2b.png used on input line 92.
+Package pdftex.def Info: pkt5_2b.png used on input line 93.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
 <pkt5_3a.png, id=31, 421.575pt x 316.0608pt>
 File: pkt5_3a.png Graphic file (type png)
  <use pkt5_3a.png>
-Package pdftex.def Info: pkt5_3a.png used on input line 96.
+Package pdftex.def Info: pkt5_3a.png used on input line 97.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
 <pkt5_3b.png, id=32, 421.575pt x 316.0608pt>
 File: pkt5_3b.png Graphic file (type png)
  <use pkt5_3b.png>
-Package pdftex.def Info: pkt5_3b.png used on input line 96.
+Package pdftex.def Info: pkt5_3b.png used on input line 97.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
 <pkt5_4a.png, id=33, 421.575pt x 316.0608pt>
 File: pkt5_4a.png Graphic file (type png)
  <use pkt5_4a.png>
-Package pdftex.def Info: pkt5_4a.png used on input line 100.
+Package pdftex.def Info: pkt5_4a.png used on input line 101.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
 
 <pkt5_4b.png, id=34, 421.575pt x 316.0608pt>
 File: pkt5_4b.png Graphic file (type png)
  <use pkt5_4b.png>
-Package pdftex.def Info: pkt5_4b.png used on input line 100.
+Package pdftex.def Info: pkt5_4b.png used on input line 101.
 (pdftex.def)             Requested size: 199.16928pt x 149.32022pt.
  [3 <./pkt5_1a.png (PNG copy)> <./pkt5_1b.png (PNG copy)> <./pkt5_2a.png (PNG c
 opy)> <./pkt5_2b.png (PNG copy)> <./pkt5_3a.png (PNG copy)> <./pkt5_3b.png (PNG
- copy)>] [4 <./pkt5_4a.png (PNG copy)> <./pkt5_4b.png (PNG copy)>] (document.au
-x) ) 
+ copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
+
+ []
+
+[4 <./pkt5_4a.png (PNG copy)> <./pkt5_4b.png (PNG copy)>] (document.aux) ) 
 Here is how much of TeX's memory you used:
  12648 strings out of 493328
  205283 string characters out of 3139121
@@ -1165,18 +1169,19 @@ Here is how much of TeX's memory you used:
  18129 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,10n,40p,447b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/
-MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
-vips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/P
-rogram Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/pl/plmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr5.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy7
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on document.pdf (4 pages, 461834 bytes).
+{C:/P
+rogram Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/MiKTeX 2.
+9/fonts/enc/dvips/pl/plsc.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/p
+lmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Program Fi
+les/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pl
+mi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/pl/plr5.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on document.pdf (4 pages, 472348 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
